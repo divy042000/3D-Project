@@ -1,5 +1,8 @@
 module.exports = {
   env: { browser: true, es2020: true },
+  loader: {
+    '.js': 'jsx', // Treat .js files as .jsx files
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
