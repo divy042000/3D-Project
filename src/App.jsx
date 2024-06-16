@@ -1,43 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ResumePage from "./pages/resumePage";
+import SignUpPage from "./pages/signUp";
+import SignInPage from "./pages/signIn";
+import InfoPage from "./pages/infoPage";
 
-import { BrowserRouter } from "react-router-dom";
-import {
-  EarthCanvas,
-  BallCanvas,
-  Contact,
-  Feedbacks,
-  Experience,
-  ComputersCanvas,
-  StarsCanvas,
-  About,
-  Tech,
-  Works,
-  Hero,
-  Loader,
-  Navbar,
-} from "./components";
 function App() {
   return (
     <div>
       <BrowserRouter>
-       <div className="relative z-0 bg-primary"> 
-       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-       <Navbar/>
-       <Hero/>   
-       </div>
-       <About/>
-       <Experience/>
-       <Tech/>
-       <Works/>
-       <Feedbacks/>
-       <div className="relative z-0">
-        <Contact/>
-        <StarsCanvas/>
+        <Routes>
+          <Route path="/resumePage" element={<ResumePage />} />
+          <Route path="/signUpPage" element={<SignUpPage />} />
+          <Route path="/signInPage" element={<SignInPage />} />
+          <Route path="/infoPage" element={<InfoPage />} />
 
-       </div>
-       </div>
+        </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
